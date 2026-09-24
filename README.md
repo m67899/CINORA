@@ -10,9 +10,11 @@ Foundation اولیه اپلیکیشن سینمایی Cinora.
 
 1. `cp .env.example .env` را اجرا کنید و `DATABASE_URL` را به PostgreSQL واقعی خود بدهید.
 2. `npm install`
-3. برای ساخت migration: `npm run db:generate`
-4. برای اجرای migration: `npm run db:migrate`
+3. پس از تغییر schema، migration را با `npm run db:generate` تولید و فایل SQL تولیدشده را review کنید.
+4. migrationها را فقط روی همان PostgreSQL با `npm run db:migrate` اعمال کنید؛ این دستور به `DATABASE_URL` نیاز دارد و بدون آن fail می‌شود.
 5. `npm run dev`
+
+برای محیط توسعه از PostgreSQL واقعی جداگانه استفاده کنید و مقدار `DATABASE_URL` را در `.env` نگه دارید؛ فایل `.env` هرگز commit نمی‌شود. از `db:push` یا تغییر دستی migrationهای اجراشده استفاده نکنید؛ تغییرات schema باید migration نسخه‌دار جدید باشند.
 
 ## بررسی کیفیت
 

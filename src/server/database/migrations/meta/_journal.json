@@ -8,6 +8,13 @@
       "when": 1790274265003,
       "tag": "0000_parched_scarlet_witch",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790275198611,
+      "tag": "0001_supreme_hitman",
+      "breakpoints": true
     }
   ]
 }
